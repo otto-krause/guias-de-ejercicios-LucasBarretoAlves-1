@@ -6,7 +6,13 @@ namespace E4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
+    }
+    class Gatito
+    {
+        string nombre;
+        bool vacunas;
+        int energia;
     }
 }
