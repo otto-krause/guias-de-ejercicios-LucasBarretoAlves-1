@@ -7,7 +7,7 @@ namespace E7
         static void Main(string[] args)
         {
             int selec=0;
-            Camara vidrio_molido=new Camara(1,25);
+            Camara vidrio_molido=new Camara(1,25);3
             Camara vidrio_roto= new Camara(2,30);
             Celular ladrillo=new Celular(false, false, 1024, 10, vidrio_molido, vidrio_roto);
             while (selec!=3)
