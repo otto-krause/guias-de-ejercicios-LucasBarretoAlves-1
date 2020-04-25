@@ -2,10 +2,10 @@ namespace E4
 {
     public class Pelicula
     {
-        string nombre;
-        string genero;
-        int anio;
-        string director;
+        public string nombre;
+        public string genero;
+        public int anio;
+        public string director;
         public Pelicula (string nombre, string genero, int anio, string director)
         {
             this.nombre=nombre;
