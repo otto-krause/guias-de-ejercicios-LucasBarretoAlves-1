@@ -19,9 +19,9 @@ namespace E5
             int acu=0;
             foreach (Carrito venta in ventas)
             {
-                foreach (Producto prod in venta.contenidos)
+                foreach (Producto prod in venta.Contenidos)
                 {
-                    acu+=prod.precio;
+                    acu+=prod.Precio;
                 }
             }
             return acu;

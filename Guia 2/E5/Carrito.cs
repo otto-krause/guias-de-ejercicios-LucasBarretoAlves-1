@@ -4,7 +4,8 @@ namespace E5
 {
     public class Carrito
     {
-        public List <Producto> contenidos = new List<Producto>();
+        List <Producto> contenidos = new List<Producto>();
+        public List <Producto> Contenidos {get => contenidos;}
         public Carrito(int modif)
         {
             Producto p1= new Producto("Producto 1",1+modif);

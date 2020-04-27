@@ -2,8 +2,9 @@ namespace E5
 {
     public class Producto
     {
-        public string nombre;
-        public int precio;
+        string nombre;
+        int precio;
+        public int Precio {get => precio;}
         public Producto(string nombre, int precio)
         {
             this.nombre=nombre;
