@@ -12,8 +12,8 @@ namespace E3
             valida=true;
             foreach (Figurita figu in agregadas)
             {
-                if (figu.nombre==figurita.nombre && figu.posicion==figurita.posicion 
-                && figu.pais==figurita.pais && figu.numero==figurita.numero)
+                if (figu.Nombre==figurita.Nombre && figu.Posicion==figurita.Posicion 
+                && figu.Pais==figurita.Pais && figu.Numero==figurita.Numero)
                     valida=false;
             }
             if (valida)
@@ -25,7 +25,7 @@ namespace E3
             contado=0;
             foreach (Figurita figu in agregadas)
             {
-                if (figu.posicion==posicion)
+                if (figu.Posicion==posicion)
                     contado++;
             }
             return contado;
