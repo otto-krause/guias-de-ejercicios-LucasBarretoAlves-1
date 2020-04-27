@@ -4,23 +4,24 @@ namespace E2
 {
     public class Program
     {
-        static void Main(string[] args)
+        static void Main (string[] args)
         {
             string especialidad;
-            bool estaAtendido=false;
-            Clinica sanatoriofebril = new Clinica();
-            Console.Write("Ingrese la especialidad deseada: ");
-            especialidad=Console.ReadLine();
-            foreach (Medico medico in sanatoriofebril.medicos)
+            Clinica sanatoriofebril = new Clinica ();
+            Console.Write ("Ingrese la especialidad deseada: ");
+            especialidad = Console.ReadLine ();
+            while (especialidad != "salir")
             {
-                if (especialidad==medico.especialidad && medico.EstaDisponible() && !estaAtendido)
-                {
-                    Console.WriteLine("Lo atendera " + medico.nombre + " " + medico.apellido);
-                    estaAtendido=true;
-                }
+
+                Medico medico = sanatoriofebril.buscarMedico (especialidad);
+                if (medico != null)
+                    Console.WriteLine ("Se encontro la/el medico/a: " + medico.Nombre);
+                else
+                    Console.WriteLine ("No se encontro ningun medico disponible");
+                Console.Write ("Ingrese la especialidad deseada: ");
+                especialidad = Console.ReadLine ();
             }
-            if (estaAtendido==false)
-                Console.WriteLine("Intente de nuevo mas tarde");
+
         }
     }
 }

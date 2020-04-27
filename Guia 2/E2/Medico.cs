@@ -2,20 +2,26 @@ namespace E2
 {
     public class Medico
     {
-        public string nombre;
-        public string apellido;
-        public string especialidad;
-        public int cantidadturnos;
-        public Medico(string nombre, string apellido, string especialidad, int cantidadturnos)
+        string nombre;
+        public string Nombre { get => nombre; }
+        string apellido;
+        string especialidad;
+        
+        int cantidadturnos;
+        public Medico (string nombre, string apellido, string especialidad, int cantidadturnos)
         {
-            this.nombre=nombre;
-            this.apellido=apellido;
-            this.especialidad=especialidad;
-            this.cantidadturnos=cantidadturnos;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.especialidad = especialidad;
+            this.cantidadturnos = cantidadturnos;
         }
-        public bool EstaDisponible()
+        public bool EstaDisponibleYCumpleEspecialidad (string especialidad)
         {
-            return cantidadturnos<50;
+            return cantidadturnos < 50 && this.especialidad==especialidad;
+        }
+        public void asignarTurno()
+        {
+            cantidadturnos++;
         }
     }
 }
