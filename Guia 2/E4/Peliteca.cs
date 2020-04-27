@@ -4,8 +4,9 @@ namespace E4
 {
     public class Peliteca
     {
-        public List <Pelicula> peliteca= new List <Pelicula>();
-        public List <Pelicula> busqueda= new List <Pelicula>();
+        List <Pelicula> peliteca= new List <Pelicula>();
+        List <Pelicula> busqueda= new List <Pelicula>();
+        public List<Pelicula> Busqueda {get => busqueda;}
         public Peliteca()
         {
             Pelicula lavenganza = new Pelicula("La venganza", "Accion", 2000, "Pepe Liculas");
@@ -30,7 +31,7 @@ namespace E4
         {
             foreach (Pelicula peli in peliteca)
             {
-                if (peli.genero==genero)
+                if (peli.Genero==genero)
                     busqueda.Add(peli);
             }
         }
@@ -38,7 +39,7 @@ namespace E4
         {
             foreach (Pelicula peli in peliteca)
             {
-                if (peli.nombre==nombre)
+                if (peli.Nombre==nombre)
                     busqueda.Add(peli);
             }
         }
@@ -46,7 +47,7 @@ namespace E4
         {
             foreach (Pelicula peli in peliteca)
             {
-                if (peli.anio==anio)
+                if (peli.Anio==anio)
                     busqueda.Add(peli);
             }
         }
@@ -54,7 +55,7 @@ namespace E4
         {
             foreach (Pelicula peli in peliteca)
             {
-                if (peli.director==director)
+                if (peli.Director==director)
                     busqueda.Add(peli);
             }
         }
@@ -67,7 +68,7 @@ namespace E4
             int cont=0;
             foreach (Pelicula peli in peliteca)
             {
-                if (peli.genero==genero)
+                if (peli.Genero==genero)
                     cont++;
             }
             return cont;

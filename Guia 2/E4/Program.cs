@@ -8,11 +8,11 @@ namespace E4
         {
             Console.Clear();
             Console.WriteLine("\nNombre\t\tGenero\t\tAnio\t\tDirector");
-            foreach (Pelicula peli in peliteca.busqueda)
+            foreach (Pelicula peli in peliteca.Busqueda)
             {
-                Console.WriteLine(peli.nombre+"\t"+peli.genero+"\t\t"+peli.anio+"\t\t"+peli.director);
+                Console.WriteLine(peli.Nombre+"\t"+peli.Genero+"\t\t"+peli.Anio+"\t\t"+peli.Director);
             }
-            peliteca.busqueda.Clear();
+            peliteca.Busqueda.Clear();
             Console.WriteLine("\nPresione una tecla para continuar...");
             Console.ReadKey();
             Console.Clear();
