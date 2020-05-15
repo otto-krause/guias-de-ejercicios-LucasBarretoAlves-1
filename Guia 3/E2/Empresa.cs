@@ -4,21 +4,17 @@ namespace E2
 {
     public class Empresa
     {
-        int presupuesto;
+        private int presupuesto;
         public int Presupuesto {get => presupuesto;}
-        int horasDeTrabajo;
-        List<Contratista> lista = new List<Contratista>();
-        int total;
+        private int horasDeTrabajo;
+        private List<Contratista> lista = new List<Contratista>();
+        private int total;
     
         public Empresa(int presupuesto, int horasDeTrabajo)
         {
             this.presupuesto=presupuesto;
             this.horasDeTrabajo=horasDeTrabajo;
             this.total=0;
-        }
-        
-        public Empresa()
-        {
             Pintor juanperez = new Pintor();
             Pintor carlosgomez = new Pintor();
             Pintor joseaguirre = new Pintor();
@@ -50,6 +46,7 @@ namespace E2
             lista.Add(estanislaopato);
             lista.Add(trabajador);
         }
+
         public int GastoTotal()
         {
             foreach (Contratista contratista in lista)

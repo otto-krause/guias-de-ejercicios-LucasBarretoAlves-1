@@ -2,9 +2,9 @@ namespace E2
 {
     public class Plomero : Contratista
     {
-        int precioHora;
+        private int precioHora;
         public int PrecioHora {get => precioHora;}
-        int horas;
+        private int horas;
         public Plomero()
         {
             this.precioHora=80;

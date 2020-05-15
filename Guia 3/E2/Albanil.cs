@@ -2,11 +2,11 @@ namespace E2
 {
     public class Albanil : Contratista
     {
-        int precioHora;
+        private int precioHora;
         public int PrecioHora {get => precioHora;}
-        int horas;
-        bool esMMO;
-        int edad;
+        private int horas;
+        private bool esMMO;
+        private int edad;
         public Albanil(int edad, bool esMMO)
         {
             this.edad=edad;

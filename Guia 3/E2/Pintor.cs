@@ -2,8 +2,8 @@ namespace E2
 {
     public class Pintor : Contratista
     {   
-        int precioHora;
-        int horas;
+        private int precioHora;
+        private int horas;
         public Pintor()
         {
             this.precioHora=150;
