@@ -1,8 +1,11 @@
+using System.Collections.Generic;
 namespace E3
 {
     public abstract class Consola
     {
         protected List<Juego> listaDeJuegos;
+        protected List<Juego> auxiliar;
+
         protected int puntos;
         protected string nombre;
         public string Nombre {get => nombre;}
@@ -10,7 +13,8 @@ namespace E3
         public Consola ()
         {
             this.listaDeJuegos = new List<Juego> ();
-            this.puntos = 0;    
+            this.auxiliar = new List<Juego>();  
+            this.puntos = 0;  
         }
 
         public virtual int RevisarPuntaje ()
@@ -19,8 +23,7 @@ namespace E3
         }
         public Juego elMasNuevo ()
         {
-            List<Juego> auxiliar = this.listaDeJuegos.Reverse ();
-            return auxiliar[0];
+            return this.listaDeJuegos[(listaDeJuegos.Count)-1];
         }
 
         public Juego elMasViejo ()

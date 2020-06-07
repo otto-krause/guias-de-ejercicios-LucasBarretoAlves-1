@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 namespace E3
 {
     public class Jugador
@@ -19,14 +20,14 @@ namespace E3
             foreach (Consola consola in listaDeConsolas)
             {
                 if (consola.Nombre == juego.ConsolaCompatible)
-                    listaDeConsolas.Add(juego);
+                    consola.AgregarJuego(juego);
             }
         }
 
         public string LaMasUsada()
         {
             int puntos = 0;
-            string masUsada;
+            string masUsada = "";
 
             foreach (Consola consola in listaDeConsolas)
             {

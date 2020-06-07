@@ -1,10 +1,11 @@
+using System.Collections.Generic;
 namespace E3
 {
-    public class Ponystation_pro_SaladaEdition : Ponystation
+    public class Ponystation_pro_SaladaEdition : PonyStation4
     {
         public override void AgregarJuego (Juego juego)
         {
-            this.listaDeJuegos.Remove ();
+            this.listaDeJuegos.RemoveAt(0);
             this.listaDeJuegos.Add (juego);
             this.puntos += 25;
         }

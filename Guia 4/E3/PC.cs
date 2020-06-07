@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 namespace E3
 {
     public class PC : Consola
