@@ -21,7 +21,7 @@ namespace Ejercicio
 
         public override void Asustar(Adulto adulto)
         {
-            miembros.Max(miembro => miembro.CapacidadDeAsustar()).RecibirCaramelos(adulto.IntentoDeSusto(CapacidadDeAsustar(), MasDe15Caramelos()));
+            miembros.OrderByDescending(miembro => miembro.CapacidadDeAsustar()).First().RecibirCaramelos(adulto.IntentoDeSusto(CapacidadDeAsustar(), MasDe15Caramelos()));
         }
 
 
