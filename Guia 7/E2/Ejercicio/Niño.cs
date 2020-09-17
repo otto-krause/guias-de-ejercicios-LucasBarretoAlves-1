@@ -15,6 +15,10 @@ namespace Ejercicio
         {
             this.elementos = elementos;
             this.actitud = actitud;
+            if (actitud<1 || actitud>10)
+            {
+                throw new Exception("La actitud del niño está fuera de rango");
+            }
             this.caramelos = caramelos;
         }
 
